@@ -1,7 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { CoursesModule } from './courses/courses.module';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
 import { MyFirstComponent } from './my-first/my-first.component';
 import { MySecondComponent } from './my-second/my-second.component';
@@ -14,7 +15,8 @@ import { MySecondComponent } from './my-second/my-second.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
