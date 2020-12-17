@@ -14,7 +14,7 @@
     <img src="{{ imageUrl }}">
   </article>
 </section> -->
-<section>
+<!-- <section>
   <article>
     <h3>Two way data binding</h3>
     <div>
@@ -38,4 +38,9 @@
       <input type= "text" [(ngModel)]="person.age"/>
     </div>
   </article>
+</section> -->
+<section>
+  <article><h3>Input output Properties</h3></article>
+  <app-curso [nome]="nomeDoCurso"></app-curso>
+  <contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></contador>
 </section>
