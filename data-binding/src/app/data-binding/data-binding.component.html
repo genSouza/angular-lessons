@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <article>
     <h3>Interpolation</h3>
     <p>String renderizada com interpolação {{ url }}</p>
@@ -12,5 +12,30 @@
     <h3>Property binding</h3>
     <img [src]="imageUrl">
     <img src="{{ imageUrl }}">
+  </article>
+</section> -->
+<section>
+  <article>
+    <h3>Two way data binding</h3>
+    <div>
+      <input
+        type="text"
+        [value]="name"
+        (input)="name = inputText.value"
+        #inputText
+      />
+
+      <input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+
+      <input type ="text" [(ngModel)] = "name">
+
+      <p>Você Digitou: {{ name }}</p>
+    </div>
+
+    <div>
+      <p>Meu nome é {{person.name}} e tenho {{person.age}} anos de idade</p>
+      <input type= "text" [(ngModel)]="person.name"/>
+      <input type= "text" [(ngModel)]="person.age"/>
+    </div>
   </article>
 </section>
